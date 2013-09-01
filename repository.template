@@ -1,4 +1,4 @@
-location = ${ROOT}/var/paludis/repositories/%{repository_template_name}
+location = ${root}/var/db/paludis/repositories/%{repository_template_name}
 format = %{repository_template_format}
 sync = %{repository_template_sync}
 master_repository = gentoo
