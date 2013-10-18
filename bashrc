@@ -7,7 +7,7 @@ CHOST="x86_64-pc-linux-gnu"
 # -flto=jobserver -floop-parallelize-all
 CFLAGS="-march=native -O2 -ggdb -pipe -ftree-vectorize -fmerge-all-constants -minline-stringops-dynamically -mtls-dialect=gnu2"
 CXXFLAGS="${CFLAGS}"
-LDFLAGS="-Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,--gc-sections -Wl,--hash-style=gnu"
+LDFLAGS="-Wl,-O1 -Wl,--sort-common -Wl,--as-needed -Wl,--gc-sections -Wl,--hash-style=gnu -Wl,--enable-new-dtags"
 MAKEOPTS="-j4"
 # Reduce SPAM from cmake based builds
 CMAKE_VERBOSE=OFF
@@ -20,7 +20,7 @@ case "${PN}" in
         einfo "Enable ld.gold linker"
         EXTRA_ECONF="--enable-gold-default"
         ;;&
-    glibc|grub|cairo)
+    glibc|grub|cairo|virtualbox)
         einfo "Remove --gc-sections linker option"
         LDFLAGS=`sed -e 's/ -Wl,--gc-sections//' -e 's/ -Wl,--print-gc-sections//' <<<${LDFLAGS}`
         ;;&
