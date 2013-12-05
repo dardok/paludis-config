@@ -39,6 +39,11 @@ case "${PN}" in
         CFLAGS=`sed 's,-O2,-O3,' <<<${CFLAGS}`
         CXXFLAGS="${CFLAGS}"
         ;;&
+    firefox)
+        einfo "Disable debug info"
+        CFLAGS=`sed -e 's/ -ggdb//g' <<<${CFLAGS}`
+        CXXFLAGS="${CFLAGS}"
+        ;;&
 esac
 
 # Detect terminal width dynamically for better [ ok ] align
