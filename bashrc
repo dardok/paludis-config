@@ -20,16 +20,16 @@ case "${PN}" in
         einfo "Enable ld.gold linker"
         EXTRA_ECONF="--enable-gold-default"
         ;;&
-    glibc|grub|cairo|virtualbox)
+    glibc|grub|cairo|virtualbox|llvm)
         einfo "Remove --gc-sections linker option"
         LDFLAGS=`sed -e 's/ -Wl,--gc-sections//' -e 's/ -Wl,--print-gc-sections//' <<<${LDFLAGS}`
         ;;&
-    pixman)
+    pixman|llvm)
         einfo "Remove -mtls-dialect=gnu2 from CFLAGS and CXXFLAGS"
         CFLAGS=`sed -e 's/ -mtls-dialect=gnu2//' <<<${CFLAGS}`
         CXXFLAGS="${CFLAGS}"
         ;;&
-    glibc|grub)
+    glibc|grub|llvm)
         einfo "Setting --hash-style=both linker option"
         LDFLAGS=`sed -e 's/ --hash-style=gnu/--hash-style=both/' <<<${LDFLAGS}`
         ;;&
