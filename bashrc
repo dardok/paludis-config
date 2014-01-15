@@ -8,6 +8,9 @@ SKIP_FUNCTIONS="test"
 MAKEOPTS="-j4"
 # Reduce SPAM from cmake based builds
 CMAKE_VERBOSE=OFF
+# Tell to autotools (if used) not to create useless,
+# for one time build, `.d' files
+EXTRA_ECONF="--disable-dependency-tracking"
 
 # Prepare compiler options (use "predefined" vairables to group them),
 # so particular environments may refer them to turn OFF for example...
