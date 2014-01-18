@@ -86,9 +86,11 @@
 - profiles/default/linux/alpha/***
 - profiles/default/linux/amd64/10.0/***
 - profiles/default/linux/amd64/13.0/desktop/gnome/***
+- profiles/default/linux/amd64/13.0/desktop/kde/systemd/***
 - profiles/default/linux/amd64/13.0/selinux/***
 - profiles/default/linux/amd64/dev/***
 - profiles/default/linux/arm/***
+- profiles/default/linux/arm64/***
 - profiles/default/linux/hppa/***
 - profiles/default/linux/ia64/***
 - profiles/default/linux/m68k/***
@@ -115,4 +117,5 @@
 - profiles/releases/10.0/***
 - profiles/releases/freebsd-*/***
 - profiles/targets/desktop/gnome/***
+- profiles/targets/systemd/***
 - profiles/uclibc/***
