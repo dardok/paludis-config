@@ -1,32 +1,47 @@
+# Keep metadata.xml in a category dir, when +smth/-*** filter in action
++ **/metadata.xml
+# Remove older change logs (I want only recent)
+- **ChangeLog-*
+
 #
-# DO NOT EDIT! THIS FILE WAS GENERATED FROM ./gentoo-portage-exclude.list.skel
-#
-#
-# Remove some categories I unlikely will use
+# Remove some categories/packages I unlikely will use
+# (keep only used in particular category)
 #
 - app-accessibility/***
 - app-antivirus/***
-- app-editors/emacs*/***
-- app-editors/gvim*/***
-- app-editors/qemacs*/***
-- app-editors/xemacs*/***
-- app-editors/vim*/***
++ app-dicts/aspell-en**
++ app-dicts/aspell-ru**
++ app-dicts/myspell-en**
++ app-dicts/myspell-ru**
+- app-dicts/**
+- app-cdr/***
++ app-editors/kile**
++ app-editors/nano**
+- app-editors/**
 - app-emacs/***
 - app-forensics/***
-- app-i18n/man-pages-*/***
++ app-i18n/enca**
+- app-i18n/**
 - app-leechcraft/***
++ app-mobilephone/obex**
+- app-mobilephone/**
 - app-pda/***
 - app-vim/***
 - app-xemacs/***
 - dev-ada/***
 - dev-dotnet/***
+- dev-embedded/***
 - dev-games/***
 - dev-haskell/***
 - dev-lisp/***
 - dev-lua/***
 - dev-ml/***
++ dev-scheme/guile**
+- dev-scheme/**
 - dev-tcltk/***
 - games-*/***
++ gnome-base/lib**
+- gnome-base/**
 - gnome-extra/***
 - gnustep-apps/***
 - gnustep-base/***
@@ -34,13 +49,26 @@
 - gpe-base/***
 - gpe-utils/***
 - lxde-base/***
-- media-plugins/vdr-*/***
++ mail-client/mailx**
+- mail-client/**
+- mail-filter/***
++ mail-mta/ssmtp**
+- mail-mta/**
+- media-gfx/iscan**
+- media-plugins/gmpc**
+- media-plugins/vdr**
 - media-radio/***
 - media-tv/***
-- media-video/vdr-*/***
 - net-dialup/***
++ net-irc/kvirc**
+- net-irc/**
 - net-news/***
 - net-nntp/***
++ net-p2p/ktorrent**
+- net-p2p/**
++ net-print/cups**
+- net-print/**
+- net-proxy/***
 - net-zope/***
 - razorqt-base/***
 - rox-base/***
@@ -53,11 +81,30 @@
 - sci-physics/***
 - sec-policy/***
 - sys-cluster/***
+- sys-firmware/***
 - sys-freebsd/***
 - sys-infiniband/***
++ sys-kernel/genkernel**
++ sys-kernel/gentoo-sources**
++ sys-kernel/linux-headers**
+- sys-kernel/**
 - virtual/emacs*/***
 - virtual/leechcraft*/***
++ x11-drivers/xf86-input-evdev**
++ x11-drivers/xf86-input-keyboard**
++ x11-drivers/xf86-input-mouse**
++ x11-drivers/xf86-input-synaptics**
++ x11-drivers/xf86-video-intel**
+- x11-drivers/**
 - x11-plugins/***
+- x11-themes/gdm**
+- x11-themes/gnome**
+- x11-themes/gnustep**
+- x11-themes/gtk**
+- x11-themes/icewm**
+- x11-themes/fvwm**
+- x11-themes/vdr**
+- x11-themes/zuki**
 - x11-wm/***
 - xfce-base/***
 - xfce-extra/***
@@ -65,128 +112,62 @@
 #
 # Do not sync some other (optional) stuff
 #
-- eclass/tests/***
-- licenses/***
+- /eclass/tests/
++ /eclass/***
+- /licenses/
 
 #
 # Remove architectures I don't use
 #
-- profiles/arch/alpha/***
-- profiles/arch/amd64-fbsd/***
-- profiles/arch/arm/***
-- profiles/arch/hppa/***
-- profiles/arch/ia64/***
-- profiles/arch/m68k/***
-- profiles/arch/mips/***
-- profiles/arch/powerpc/***
-- profiles/arch/s390/***
-- profiles/arch/sh/***
-- profiles/arch/sparc/***
-- profiles/arch/sparc-fbsd/***
-- profiles/arch/x86/***
-- profiles/arch/x86-fbsd/***
-- profiles/default/bsd/***
-- profiles/default/linux/alpha/***
-- profiles/default/linux/amd64/10.0/***
-- profiles/default/linux/amd64/13.0/desktop/gnome/***
-- profiles/default/linux/amd64/13.0/desktop/kde/systemd/***
-- profiles/default/linux/amd64/13.0/selinux/***
-- profiles/default/linux/amd64/dev/***
-- profiles/default/linux/arm/***
-- profiles/default/linux/arm64/***
-- profiles/default/linux/hppa/***
-- profiles/default/linux/ia64/***
-- profiles/default/linux/m68k/***
-- profiles/default/linux/mips/***
-- profiles/default/linux/powerpc/***
-- profiles/default/linux/s390/***
-- profiles/default/linux/sh/***
-- profiles/default/linux/sparc/***
-- profiles/default/linux/x86/***
-- profiles/embedded/***
-- profiles/features/selinux/***
-- profiles/hardened/***
-- profiles/prefix/aix/***
-- profiles/prefix/bsd/***
-- profiles/prefix/darwin/***
-- profiles/prefix/hpux/***
-- profiles/prefix/linux/arm/***
-- profiles/prefix/linux/ia64/***
-- profiles/prefix/linux/ppc64/***
-- profiles/prefix/linux/x86/***
-- profiles/prefix/mint/***
-- profiles/prefix/sunos/***
-- profiles/prefix/windows/***
-- profiles/releases/10.0/***
-- profiles/releases/freebsd-*/***
-- profiles/targets/desktop/gnome/***
-- profiles/targets/systemd/***
-- profiles/uclibc/***
-#
-# Remove some categories I unlikely will use
-#
-- metadata/md5-cache/app-accessibility/***
-- metadata/md5-cache/app-antivirus/***
-- metadata/md5-cache/app-editors/emacs*/***
-- metadata/md5-cache/app-editors/gvim*/***
-- metadata/md5-cache/app-editors/qemacs*/***
-- metadata/md5-cache/app-editors/xemacs*/***
-- metadata/md5-cache/app-editors/vim*/***
-- metadata/md5-cache/app-emacs/***
-- metadata/md5-cache/app-forensics/***
-- metadata/md5-cache/app-i18n/man-pages-*/***
-- metadata/md5-cache/app-leechcraft/***
-- metadata/md5-cache/app-pda/***
-- metadata/md5-cache/app-vim/***
-- metadata/md5-cache/app-xemacs/***
-- metadata/md5-cache/dev-ada/***
-- metadata/md5-cache/dev-dotnet/***
-- metadata/md5-cache/dev-games/***
-- metadata/md5-cache/dev-haskell/***
-- metadata/md5-cache/dev-lisp/***
-- metadata/md5-cache/dev-lua/***
-- metadata/md5-cache/dev-ml/***
-- metadata/md5-cache/dev-tcltk/***
-- metadata/md5-cache/games-*/***
-- metadata/md5-cache/gnome-extra/***
-- metadata/md5-cache/gnustep-apps/***
-- metadata/md5-cache/gnustep-base/***
-- metadata/md5-cache/gnustep-libs/***
-- metadata/md5-cache/gpe-base/***
-- metadata/md5-cache/gpe-utils/***
-- metadata/md5-cache/lxde-base/***
-- metadata/md5-cache/media-plugins/vdr-*/***
-- metadata/md5-cache/media-radio/***
-- metadata/md5-cache/media-tv/***
-- metadata/md5-cache/media-video/vdr-*/***
-- metadata/md5-cache/net-dialup/***
-- metadata/md5-cache/net-news/***
-- metadata/md5-cache/net-nntp/***
-- metadata/md5-cache/net-zope/***
-- metadata/md5-cache/razorqt-base/***
-- metadata/md5-cache/rox-base/***
-- metadata/md5-cache/rox-extra/***
-- metadata/md5-cache/sci-biology/***
-- metadata/md5-cache/sci-calculators/***
-- metadata/md5-cache/sci-chemistry/***
-- metadata/md5-cache/sci-electronics/***
-- metadata/md5-cache/sci-misc/***
-- metadata/md5-cache/sci-physics/***
-- metadata/md5-cache/sec-policy/***
-- metadata/md5-cache/sys-cluster/***
-- metadata/md5-cache/sys-freebsd/***
-- metadata/md5-cache/sys-infiniband/***
-- metadata/md5-cache/virtual/emacs*/***
-- metadata/md5-cache/virtual/leechcraft*/***
-- metadata/md5-cache/x11-plugins/***
-- metadata/md5-cache/x11-wm/***
-- metadata/md5-cache/xfce-base/***
-- metadata/md5-cache/xfce-extra/***
-
-#
-# Do not sync some other (optional) stuff
-#
-
-#
-# Remove architectures I don't use
-#
+- /profiles/arch/alpha/***
+- /profiles/arch/amd64-fbsd/***
+- /profiles/arch/arm/***
+- /profiles/arch/hppa/***
+- /profiles/arch/ia64/***
+- /profiles/arch/m68k/***
+- /profiles/arch/mips/***
+- /profiles/arch/powerpc/***
+- /profiles/arch/s390/***
+- /profiles/arch/sh/***
+- /profiles/arch/sparc/***
+- /profiles/arch/sparc-fbsd/***
+- /profiles/arch/x86/***
+- /profiles/arch/x86-fbsd/***
+- /profiles/default/bsd/***
+- /profiles/default/linux/alpha/***
+- /profiles/default/linux/amd64/10.0/***
+- /profiles/default/linux/amd64/13.0/desktop/gnome/***
+- /profiles/default/linux/amd64/13.0/desktop/kde/systemd/***
+- /profiles/default/linux/amd64/13.0/selinux/***
+- /profiles/default/linux/amd64/dev/***
+- /profiles/default/linux/arm/***
+- /profiles/default/linux/arm64/***
+- /profiles/default/linux/hppa/***
+- /profiles/default/linux/ia64/***
+- /profiles/default/linux/m68k/***
+- /profiles/default/linux/mips/***
+- /profiles/default/linux/powerpc/***
+- /profiles/default/linux/s390/***
+- /profiles/default/linux/sh/***
+- /profiles/default/linux/sparc/***
+- /profiles/default/linux/x86/***
+- /profiles/embedded/***
+- /profiles/features/selinux/***
+- /profiles/hardened/***
+- /profiles/prefix/aix/***
+- /profiles/prefix/bsd/***
+- /profiles/prefix/darwin/***
+- /profiles/prefix/hpux/***
+- /profiles/prefix/linux/arm/***
+- /profiles/prefix/linux/ia64/***
+- /profiles/prefix/linux/ppc64/***
+- /profiles/prefix/linux/x86/***
+- /profiles/prefix/mint/***
+- /profiles/prefix/sunos/***
+- /profiles/prefix/windows/***
+- /profiles/releases/10.0/***
+- /profiles/releases/freebsd-*/***
+- /profiles/targets/desktop/gnome/***
+- /profiles/targets/systemd/***
+- /profiles/uclibc/***
+- /profiles/ChangeLog-**
