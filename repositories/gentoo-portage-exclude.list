@@ -1,7 +1,7 @@
-# Keep metadata.xml in a category dir, when +smth/-*** filter in action
+# Keep metadata.xml in a category dir, when "+cat/smth**"+"-cat/**" filter in action
 + **/metadata.xml
 # Remove older change logs (I want only recent)
-- **ChangeLog-*
+- ChangeLog-*
 
 #
 # Remove some categories/packages I unlikely will use
@@ -119,57 +119,43 @@
 - /licenses/
 
 #
-# Remove architectures I don't use
+# Remove architectures/profiles/features I don't use
 #
-- /profiles/arch/alpha/***
-- /profiles/arch/amd64-fbsd/***
-- /profiles/arch/arm/***
-- /profiles/arch/hppa/***
-- /profiles/arch/ia64/***
-- /profiles/arch/m68k/***
-- /profiles/arch/mips/***
-- /profiles/arch/powerpc/***
-- /profiles/arch/s390/***
-- /profiles/arch/sh/***
-- /profiles/arch/sparc/***
-- /profiles/arch/sparc-fbsd/***
-- /profiles/arch/x86/***
-- /profiles/arch/x86-fbsd/***
-- /profiles/default/bsd/***
-- /profiles/default/linux/alpha/***
-- /profiles/default/linux/amd64/10.0/***
-- /profiles/default/linux/amd64/13.0/desktop/gnome/***
-- /profiles/default/linux/amd64/13.0/desktop/kde/systemd/***
-- /profiles/default/linux/amd64/13.0/selinux/***
-- /profiles/default/linux/amd64/dev/***
-- /profiles/default/linux/arm/***
-- /profiles/default/linux/arm64/***
-- /profiles/default/linux/hppa/***
-- /profiles/default/linux/ia64/***
-- /profiles/default/linux/m68k/***
-- /profiles/default/linux/mips/***
-- /profiles/default/linux/powerpc/***
-- /profiles/default/linux/s390/***
-- /profiles/default/linux/sh/***
-- /profiles/default/linux/sparc/***
-- /profiles/default/linux/x86/***
+
+#
+# Keep files that make up a prifile (PMS-5 §5.2.1)
+#
++ /profiles/**/eapi
++ /profiles/**/make*
++ /profiles/**/parent
++ /profiles/**/package*
++ /profiles/**/profile*
++ /profiles/**/use*
++ /profiles/**/ChangeLog
+
+#
+# Keep nested directories according to my profile: 
+# «native 64bit gentoo linux release 13.0 w/ multilib and KDE desktop»
+#
++ /profiles/**/amd64
++ /profiles/**/linux
++ /profiles/**/13.0
++ /profiles/**/64bit-native
++ /profiles/**/multilib
++ /profiles/**/multilib/lib32
++ /profiles/**/desktop
++ /profiles/**/kde
+
+#
+# Remove architectures/profiles/features I don't use
+# (i.e. everything doesn't mentioned above)
+#
+- /profiles/arch/**
+- /profiles/default/**
 - /profiles/embedded/***
-- /profiles/features/selinux/***
+- /profiles/features/**
 - /profiles/hardened/***
-- /profiles/prefix/aix/***
-- /profiles/prefix/bsd/***
-- /profiles/prefix/darwin/***
-- /profiles/prefix/hpux/***
-- /profiles/prefix/linux/arm/***
-- /profiles/prefix/linux/ia64/***
-- /profiles/prefix/linux/ppc64/***
-- /profiles/prefix/linux/x86/***
-- /profiles/prefix/mint/***
-- /profiles/prefix/sunos/***
-- /profiles/prefix/windows/***
-- /profiles/releases/10.0/***
-- /profiles/releases/freebsd-*/***
-- /profiles/targets/desktop/gnome/***
-- /profiles/targets/systemd/***
+- /profiles/prefix/**
+- /profiles/releases/**
+- /profiles/targets/**
 - /profiles/uclibc/***
-- /profiles/ChangeLog-**
