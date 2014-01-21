@@ -112,15 +112,19 @@
 - xfce-extra/***
 
 #
-# Do not sync some other (optional) stuff
+# Do not sync some other (optional or outdated) stuff
 #
 - /eclass/tests/
 + /eclass/***
 - /licenses/
-
-#
-# Remove architectures/profiles/features I don't use
-#
++ /metadata/glsa/glsa-2014*
++ /metadata/glsa/index.xml
++ /metadata/glsa/timestamp.chk
+- /metadata/glsa/**
++ /metadata/news/2014-**
++ /metadata/news/timestamp.chk
+- /metadata/news/**
+- /metadata/.cvsignore
 
 #
 # Keep files that make up a prifile (PMS-5 §5.2.1)
@@ -150,6 +154,7 @@
 # Remove architectures/profiles/features I don't use
 # (i.e. everything doesn't mentioned above)
 #
++ /profiles/arch/base**
 - /profiles/arch/**
 - /profiles/default/**
 - /profiles/embedded/***
