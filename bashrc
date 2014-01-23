@@ -10,7 +10,7 @@ MAKEOPTS="-j4"
 CMAKE_VERBOSE=OFF
 # Tell to autotools (if used) not to create useless,
 # for one time build, `.d' files
-EXTRA_ECONF="--disable-dependency-tracking"
+EXTRA_ECONF="--disable-dependency-tracking --enable-silent-rules"
 
 # Prepare compiler options (use "predefined" vairables to group them),
 # so particular environments may refer them to turn OFF for example...
