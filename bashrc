@@ -11,7 +11,7 @@ CMAKE_VERBOSE=OFF
 # Tell to autotools (if used) not to create useless,
 # for one time build, `.d' files, reduce compilation messages
 # and use cache for config results
-EXTRA_ECONF="--disable-dependency-tracking --enable-silent-rules -C --cache-file=/var/tmp/config.cache"
+EXTRA_ECONF="--disable-dependency-tracking --enable-silent-rules --cache-file=/var/tmp/config.cache"
 
 # Prepare compiler options (use "predefined" vairables to group them),
 # so particular environments may refer them to turn OFF for example...
@@ -24,7 +24,8 @@ MISC_FLAGS="-fipa-pta"
 SOME_O3_FLAGS="-ftree-vectorize -fmerge-all-constants -fira-loop-pressure"
 ARCH_FLAGS="-march=native -minline-stringops-dynamically -mtls-dialect=gnu2"
 
-CXXONLY_FLAGS="-fnothrow-opt"
+# Suppress useless^W warnings about unused local typedefs appeared for some packages
+CXXONLY_FLAGS="-fnothrow-opt -Wno-unused-local-typedefs"
 
 CFLAGS="-O2 -ggdb -pipe ${ARCH_FLAGS} ${GRAPHITE} ${SOME_O3_FLAGS} ${MISC_FLAGS}"
 CXXFLAGS="${CFLAGS} ${CXXONLY_FLAGS}"
