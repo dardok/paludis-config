@@ -9,8 +9,7 @@ MAKEOPTS="-j4"
 # Reduce SPAM from cmake based builds
 CMAKE_VERBOSE=OFF
 # Tell to autotools (if used) not to create useless,
-# for one time build, `.d' files, reduce compilation messages
-# and use cache for config results
+# for one time build, `.d' files and reduce compilation messages.
 EXTRA_ECONF="--disable-dependency-tracking --enable-silent-rules"
 
 # Prepare compiler options (use "predefined" vairables to group them),
