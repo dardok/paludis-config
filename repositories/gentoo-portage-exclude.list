@@ -72,8 +72,13 @@
 - media-radio/***
 - media-tv/***
 - net-dialup/***
+- net-firewall/***
++ net-ftp/ncftp**
+- net-ftp/**
 + net-irc/kvirc**
 - net-irc/**
++ net-mail/mailbase**
+- net-mail/**
 - net-news/***
 - net-nntp/***
 + net-p2p/ktorrent**
@@ -116,6 +121,7 @@
 + x11-drivers/xf86-video-intel**
 - x11-drivers/**
 - x11-plugins/***
+- x11-terms/***
 - x11-themes/gdm**
 - x11-themes/gnome**
 - x11-themes/gnustep**
