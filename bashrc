@@ -19,8 +19,8 @@ LTO="-flto=4"
 LTO_LD="-fuse-linker-plugin -flto-report"
 
 GRAPHITE="-floop-block -floop-interchange -ftree-loop-distribution -floop-strip-mine -fgraphite-identity -fivopts"
-MISC_FLAGS="-fipa-pta"
-SOME_O3_FLAGS="-ftree-vectorize -fmerge-all-constants -fira-loop-pressure"
+MISC_FLAGS="-fipa-pta -fweb"
+SOME_O3_FLAGS="-ftree-vectorize -fmerge-all-constants"
 ARCH_FLAGS="-march=native -minline-stringops-dynamically -mtls-dialect=gnu2"
 
 # Suppress useless^W warnings about unused local typedefs appeared for some packages
