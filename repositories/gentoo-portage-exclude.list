@@ -48,6 +48,7 @@
 - dev-scheme/**
 - dev-tcltk/***
 - games-*/***
++ gnome-base/gconf**
 + gnome-base/lib**
 - gnome-base/**
 - gnome-extra/***
