@@ -108,6 +108,7 @@
 - sys-infiniband/***
 + sys-kernel/genkernel**
 + sys-kernel/gentoo-sources**
++ sys-kernel/linux-firmware**
 + sys-kernel/linux-headers**
 - sys-kernel/**
 - virtual/emacs*/***
