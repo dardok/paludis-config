@@ -7,7 +7,6 @@
 # Remove some categories/packages I unlikely will use
 # (keep only used in particular category)
 #
-- app-accessibility/***
 - app-antivirus/***
 + app-dicts/aspell-en**
 + app-dicts/aspell-ru**
@@ -51,7 +50,8 @@
 + gnome-base/gconf**
 + gnome-base/lib**
 - gnome-base/**
-- gnome-extra/***
++ gnome-extra/zenity**
+- gnome-extra/**
 - gnustep-apps/***
 - gnustep-base/***
 - gnustep-libs/***
@@ -110,6 +110,7 @@
 + sys-kernel/gentoo-sources**
 + sys-kernel/linux-firmware**
 + sys-kernel/linux-headers**
++ sys-kernel/linux-firmware**
 - sys-kernel/**
 - virtual/emacs*/***
 - virtual/leechcraft*/***
@@ -121,6 +122,7 @@
 + x11-drivers/xf86-input-mouse**
 + x11-drivers/xf86-input-synaptics**
 + x11-drivers/xf86-video-intel**
++ x11-drivers/xf86-video-nouveau**
 - x11-drivers/**
 - x11-plugins/***
 - x11-terms/***

@@ -5,7 +5,7 @@
 
 CHOST="x86_64-pc-linux-gnu"
 SKIP_FUNCTIONS="test"
-MAKEOPTS="-j4"
+MAKEOPTS="-j8"
 # Reduce SPAM from cmake based builds
 CMAKE_VERBOSE=OFF
 # Tell to autotools (if used) not to create useless,
