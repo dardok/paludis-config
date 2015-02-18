@@ -1,3 +1,0 @@
-location = ${root}/var/db/paludis/repositories/sunrise
-format = e
-sync = git://git.overlays.gentoo.org/proj/sunrise-reviewed.git git+http://git.overlays.gentoo.org/gitroot/proj/sunrise-reviewed.git git+ssh://git@git.overlays.gentoo.org/proj/sunrise-reviewed.git
